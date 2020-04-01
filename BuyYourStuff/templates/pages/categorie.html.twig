@@ -1,0 +1,31 @@
+{% extends "base.html.twig" %}
+
+{% block stylesheets %}
+    <style>
+    .card-perso{
+        background-color: #fff;
+        color: #000;
+        border: 1px solid rgba(0,0,0,.1);
+        box-shadow: 0 1px 8px 0 rgba(0,0,0,.12);
+        border-radius: 8px;
+        padding: 20px 15px;
+    }
+    </style>
+{% endblock %}
+
+{% block body %}
+    <div class="text-right" style="margin: 15px">
+        <a href="{{ path('categorie.new') }}" class="btn btn-secondary">Ajouter une nouvelle catégorie</a>
+    </div>
+    <div class="container">
+        <div class="row flex">
+            {% for categorie in categories %}
+                <div class="col-6">
+                    <ul>
+                        <li>{{ categorie.namec }}</li>
+                    </ul>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
