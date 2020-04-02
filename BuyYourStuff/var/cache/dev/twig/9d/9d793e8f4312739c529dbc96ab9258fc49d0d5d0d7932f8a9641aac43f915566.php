@@ -60,29 +60,58 @@ class __TwigTemplate_6ddc216faa59a07abe95bc8b7a0881f5557b0706db83acd786cf3af7f8d
         // line 9
         echo "    </head>
     <body>
-    <nav class=\"navbar navbar-expand-lg navbar-dark bg-primary\">
-  <a class=\"navbar-brand\" style=\"margin-right: 50px\" href=\"/\">Accueil</a>
-  <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
-    <span class=\"navbar-toggler-icon\"></span>
-  </button>
+    <nav class=\"navbar navbar-expand-lg navbar-dark bg-primary\" style=\"position: fixed; width: 100%; z-index: 5; display: flex; top: 0;\">
 
-  <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">
+
+  <div class=\"navbar-collapse\" id=\"navbarSupportedContent\">
     <ul class=\"navbar-nav mr-auto\">
-      <li class=\"nav-item active\" style=\"margin-right: 10px\">
-        <a class=\"nav-link\" href=\"/product\">Produits <span class=\"sr-only\">(current)</span></a>
+      <li class=\"nav-item dropdown\">
+      <a class=\"nav-link dropdown-toggle\" style=\"margin-right: 20px\" href=\"#\" id=\"navbarDropdownMenuLink\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">
+        <img src=\"https://news-capestel.com/assets/themes/capestel/src/images/burger-white.png\" alt=\"menu\" style=\"width: 30px; height: 30px;\">
+      </a>
+      <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdownMenuLink\">
+        <a class=\"dropdown-item\" href=\"/product\"><span class=\"fa fa-life-ring\"></span>Produits</a>
+        <a class=\"dropdown-item\" href=\"/categorie\">Catégories</a>
+      </div>
       </li>
-      <li class=\"nav-item active\">
-        <a class=\"nav-link\" href=\"/categorie\">Categories <span class=\"sr-only\">(current)</span></a>
+      <li class=\"nav-item\">
+        <a class=\"navbar-brand\" href=\"/home\">Accueil</a>
+        <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
+        <span class=\"navbar-toggler-icon\"></span>
+        </button>
+      </li>
+      <li class=\"nav-item\">
+        <form name=\"barreRecherche\" action=\"/search\" method=\"post\" style=\"
+        left: 30%;
+        top: 0;
+        height: 100%;
+        position: absolute;
+        align-items: center;
+        display: flex;
+        width: 30%;\">
+          <input type=\"text\" placeholder=\"Rechercher...\" name=\"recherche\" style=\"border-radius: 8px; padding: 5px 40px 5px 5px; border: solid 1px black; width: 100%;\"/>
+          <input type=\"submit\" value style=\"
+            background-image: url(https://cdn.icon-icons.com/icons2/1489/PNG/512/magnifyingglass_102622.png);
+            height: 35px;
+            width: 35px;
+            border-radius: 8px;
+            background-size: 1.2rem;
+            background-repeat: no-repeat;
+            background-position: 50%;
+            border: 1px solid black;
+            position: absolute;
+            right: 0;\"/>
+        </form>
       </li>
   </div>
 </nav>
         ";
-        // line 27
+        // line 56
         $this->displayBlock('body', $context, $blocks);
-        // line 28
+        // line 57
         echo "        ";
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 29
+        // line 58
         echo "        <script src=\"https://code.jquery.com/jquery-3.4.1.slim.min.js\" integrity=\"sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n\" crossorigin=\"anonymous\"></script>
         <script src=\"https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js\" integrity=\"sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo\" crossorigin=\"anonymous\"></script>
         <script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js\" integrity=\"sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6\" crossorigin=\"anonymous\"></script>
@@ -134,7 +163,7 @@ class __TwigTemplate_6ddc216faa59a07abe95bc8b7a0881f5557b0706db83acd786cf3af7f8d
 
     }
 
-    // line 27
+    // line 56
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -152,7 +181,7 @@ class __TwigTemplate_6ddc216faa59a07abe95bc8b7a0881f5557b0706db83acd786cf3af7f8d
 
     }
 
-    // line 28
+    // line 57
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -177,7 +206,7 @@ class __TwigTemplate_6ddc216faa59a07abe95bc8b7a0881f5557b0706db83acd786cf3af7f8d
 
     public function getDebugInfo()
     {
-        return array (  156 => 28,  138 => 27,  120 => 8,  101 => 5,  86 => 29,  83 => 28,  81 => 27,  61 => 9,  59 => 8,  53 => 5,  47 => 1,);
+        return array (  185 => 57,  167 => 56,  149 => 8,  130 => 5,  115 => 58,  112 => 57,  110 => 56,  61 => 9,  59 => 8,  53 => 5,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -192,19 +221,48 @@ class __TwigTemplate_6ddc216faa59a07abe95bc8b7a0881f5557b0706db83acd786cf3af7f8d
         {% block stylesheets %}{% endblock %}
     </head>
     <body>
-    <nav class=\"navbar navbar-expand-lg navbar-dark bg-primary\">
-  <a class=\"navbar-brand\" style=\"margin-right: 50px\" href=\"/\">Accueil</a>
-  <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
-    <span class=\"navbar-toggler-icon\"></span>
-  </button>
+    <nav class=\"navbar navbar-expand-lg navbar-dark bg-primary\" style=\"position: fixed; width: 100%; z-index: 5; display: flex; top: 0;\">
 
-  <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">
+
+  <div class=\"navbar-collapse\" id=\"navbarSupportedContent\">
     <ul class=\"navbar-nav mr-auto\">
-      <li class=\"nav-item active\" style=\"margin-right: 10px\">
-        <a class=\"nav-link\" href=\"/product\">Produits <span class=\"sr-only\">(current)</span></a>
+      <li class=\"nav-item dropdown\">
+      <a class=\"nav-link dropdown-toggle\" style=\"margin-right: 20px\" href=\"#\" id=\"navbarDropdownMenuLink\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">
+        <img src=\"https://news-capestel.com/assets/themes/capestel/src/images/burger-white.png\" alt=\"menu\" style=\"width: 30px; height: 30px;\">
+      </a>
+      <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdownMenuLink\">
+        <a class=\"dropdown-item\" href=\"/product\"><span class=\"fa fa-life-ring\"></span>Produits</a>
+        <a class=\"dropdown-item\" href=\"/categorie\">Catégories</a>
+      </div>
       </li>
-      <li class=\"nav-item active\">
-        <a class=\"nav-link\" href=\"/categorie\">Categories <span class=\"sr-only\">(current)</span></a>
+      <li class=\"nav-item\">
+        <a class=\"navbar-brand\" href=\"/home\">Accueil</a>
+        <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
+        <span class=\"navbar-toggler-icon\"></span>
+        </button>
+      </li>
+      <li class=\"nav-item\">
+        <form name=\"barreRecherche\" action=\"/search\" method=\"post\" style=\"
+        left: 30%;
+        top: 0;
+        height: 100%;
+        position: absolute;
+        align-items: center;
+        display: flex;
+        width: 30%;\">
+          <input type=\"text\" placeholder=\"Rechercher...\" name=\"recherche\" style=\"border-radius: 8px; padding: 5px 40px 5px 5px; border: solid 1px black; width: 100%;\"/>
+          <input type=\"submit\" value style=\"
+            background-image: url(https://cdn.icon-icons.com/icons2/1489/PNG/512/magnifyingglass_102622.png);
+            height: 35px;
+            width: 35px;
+            border-radius: 8px;
+            background-size: 1.2rem;
+            background-repeat: no-repeat;
+            background-position: 50%;
+            border: 1px solid black;
+            position: absolute;
+            right: 0;\"/>
+        </form>
       </li>
   </div>
 </nav>

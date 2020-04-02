@@ -65,7 +65,7 @@ class __TwigTemplate_2154ce01d7de6e6e99b939ff05151abb7787f54da34af8c3c98dff83c66
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 4
-        echo "
+        echo "<div style=\"margin: 100px\"></div>
 <div class=\"container mt-4\">
     <h1>Éditer</h1>
     ";
@@ -112,7 +112,7 @@ class __TwigTemplate_2154ce01d7de6e6e99b939ff05151abb7787f54da34af8c3c98dff83c66
         return new Source("{% extends 'base.html.twig' %}
 
 {% block body %}
-
+<div style=\"margin: 100px\"></div>
 <div class=\"container mt-4\">
     <h1>Éditer</h1>
     {{ form_start(form) }}

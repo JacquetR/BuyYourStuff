@@ -15,9 +15,10 @@ return [
         '/_profiler/open' => [[['_route' => '_profiler_open_file', '_controller' => 'web_profiler.controller.profiler::openAction'], null, null, null, false, false, null]],
         '/categorie' => [[['_route' => 'categorie.index', '_controller' => 'App\\Controller\\CategorieController::index'], null, null, null, false, false, null]],
         '/categorie/new' => [[['_route' => 'categorie.new', '_controller' => 'App\\Controller\\CategorieController::new'], null, null, null, false, false, null]],
-        '/' => [[['_route' => 'home', '_controller' => 'App\\Controller\\HomeController::index'], null, null, null, false, false, null]],
+        '/home' => [[['_route' => 'home', '_controller' => 'App\\Controller\\HomeController::index'], null, null, null, false, false, null]],
         '/product' => [[['_route' => 'product.index', '_controller' => 'App\\Controller\\ProductController::index'], null, null, null, false, false, null]],
         '/product/new' => [[['_route' => 'product.new', '_controller' => 'App\\Controller\\ProductController::new'], null, null, null, false, false, null]],
+        '/search' => [[['_route' => 'search', '_controller' => 'App\\Controller\\SearchController::index'], null, null, null, false, false, null]],
     ],
     [ // $regexpList
         0 => '{^(?'
