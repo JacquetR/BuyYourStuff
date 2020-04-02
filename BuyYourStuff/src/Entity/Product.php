@@ -37,9 +37,10 @@ class Product
     private $price;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\ManyToOne(targetEntity="App\Entity\Categorie", inversedBy="products")
+     * @ORM\JoinColumn(nullable=false)
      */
-    private $namec;
+    private $categorie;
 
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\categorie", inversedBy="products")
@@ -100,14 +101,14 @@ class Product
         return $this;
     }
 
-    public function getNamec(): ?string
+    public function getCategorie(): ?categorie
     {
-        return $this->namec;
+        return $this->categorie;
     }
 
-    public function setNamec(string $namec): self
+    public function setCategorie(?categorie $categorie): self
     {
-        $this->namec = $namec;
+        $this->categorie = $categorie;
 
         return $this;
     }

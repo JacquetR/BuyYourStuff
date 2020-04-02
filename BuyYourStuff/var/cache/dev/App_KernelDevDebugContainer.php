@@ -6,11 +6,11 @@ if (\class_exists(\ContainerZv8SnMB\App_KernelDevDebugContainer::class, false)) 
     // no-op
 } elseif (!include __DIR__.'/ContainerZv8SnMB/App_KernelDevDebugContainer.php') {
     touch(__DIR__.'/ContainerZv8SnMB.legacy');
-
     return;
 }
 
 if (!\class_exists(App_KernelDevDebugContainer::class, false)) {
+
     \class_alias(\ContainerZv8SnMB\App_KernelDevDebugContainer::class, App_KernelDevDebugContainer::class, false);
 }
 
