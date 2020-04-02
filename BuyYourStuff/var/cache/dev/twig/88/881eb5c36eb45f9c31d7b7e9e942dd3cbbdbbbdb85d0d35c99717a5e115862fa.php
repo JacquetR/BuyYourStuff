@@ -65,7 +65,7 @@ class __TwigTemplate_675925defb67fc614f0586a8d68935832c7f8b0e1ac61d865cdd90e01bb
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 4
-        echo "
+        echo "<div style=\"margin: 100px\"></div>
 <div class=\"container mt-4\">
     <h1>Nouveau</h1>
     ";
@@ -112,7 +112,7 @@ class __TwigTemplate_675925defb67fc614f0586a8d68935832c7f8b0e1ac61d865cdd90e01bb
         return new Source("{% extends 'base.html.twig' %}
 
 {% block body %}
-
+<div style=\"margin: 100px\"></div>
 <div class=\"container mt-4\">
     <h1>Nouveau</h1>
     {{ form_start(form) }}

@@ -65,18 +65,6 @@ class __TwigTemplate_29372d985b18bafe42553e9b9687033809f26310e42d26125ffdcb40781
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "stylesheets"));
 
-        // line 4
-        echo "    <style>
-    .card-perso{
-        background-color: #fff;
-        color: #000;
-        border: 1px solid rgba(0,0,0,.1);
-        box-shadow: 0 1px 8px 0 rgba(0,0,0,.12);
-        border-radius: 8px;
-        padding: 20px 15px;
-    }
-    </style>
-";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -85,7 +73,7 @@ class __TwigTemplate_29372d985b18bafe42553e9b9687033809f26310e42d26125ffdcb40781
 
     }
 
-    // line 16
+    // line 6
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -95,26 +83,26 @@ class __TwigTemplate_29372d985b18bafe42553e9b9687033809f26310e42d26125ffdcb40781
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 17
-        echo "    <div class=\"text-right\" style=\"margin: 15px\">
+        // line 7
+        echo "    <div class=\"text-right\" style=\"margin: 80px 15px 15px\">
         <a href=\"";
-        // line 18
+        // line 8
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("categorie.new");
         echo "\" class=\"btn btn-secondary\">Ajouter une nouvelle catégorie</a>
     </div>
     <div class=\"container\">
         <div class=\"row flex\">
             ";
-        // line 22
+        // line 12
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["categories"]) || array_key_exists("categories", $context) ? $context["categories"] : (function () { throw new RuntimeError('Variable "categories" does not exist.', 22, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["categories"]) || array_key_exists("categories", $context) ? $context["categories"] : (function () { throw new RuntimeError('Variable "categories" does not exist.', 12, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["categorie"]) {
-            // line 23
+            // line 13
             echo "                <div class=\"col-6\">
                     <ul>
                         <li>";
-            // line 25
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["categorie"], "namec", [], "any", false, false, false, 25), "html", null, true);
+            // line 15
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["categorie"], "namec", [], "any", false, false, false, 15), "html", null, true);
             echo "</li>
                     </ul>
                 </div>
@@ -123,7 +111,7 @@ class __TwigTemplate_29372d985b18bafe42553e9b9687033809f26310e42d26125ffdcb40781
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['categorie'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 29
+        // line 19
         echo "        </div>
     </div>
 ";
@@ -147,7 +135,7 @@ class __TwigTemplate_29372d985b18bafe42553e9b9687033809f26310e42d26125ffdcb40781
 
     public function getDebugInfo()
     {
-        return array (  127 => 29,  117 => 25,  113 => 23,  109 => 22,  102 => 18,  99 => 17,  89 => 16,  69 => 4,  59 => 3,  36 => 1,);
+        return array (  115 => 19,  105 => 15,  101 => 13,  97 => 12,  90 => 8,  87 => 7,  77 => 6,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -155,20 +143,10 @@ class __TwigTemplate_29372d985b18bafe42553e9b9687033809f26310e42d26125ffdcb40781
         return new Source("{% extends \"base.html.twig\" %}
 
 {% block stylesheets %}
-    <style>
-    .card-perso{
-        background-color: #fff;
-        color: #000;
-        border: 1px solid rgba(0,0,0,.1);
-        box-shadow: 0 1px 8px 0 rgba(0,0,0,.12);
-        border-radius: 8px;
-        padding: 20px 15px;
-    }
-    </style>
 {% endblock %}
 
 {% block body %}
-    <div class=\"text-right\" style=\"margin: 15px\">
+    <div class=\"text-right\" style=\"margin: 80px 15px 15px\">
         <a href=\"{{ path('categorie.new') }}\" class=\"btn btn-secondary\">Ajouter une nouvelle catégorie</a>
     </div>
     <div class=\"container\">

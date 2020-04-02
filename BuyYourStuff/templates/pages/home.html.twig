@@ -1,5 +1,45 @@
 {% extends "base.html.twig" %}
 
+{% block stylesheets %}
+    <style>
+    .card-perso{
+        background-color: #fff;
+        color: #000;
+        border: 1px solid rgba(0,0,0,.1);
+        box-shadow: 0 1px 8px 0 rgba(0,0,0,.12);
+        border-radius: 8px;
+        padding: 20px 15px;
+        text-align: center;
+        min-height: 420px;
+        margin-bottom: 20px;
+    }
+    </style>
+{% endblock %}
+
 {% block body %}
-    <h1>Bonjour</h1>
+    <div style="margin: 100px"></div>
+    <div class="container">
+        <div class="row">
+            {% for produit in produits %}
+                <div class="col-md-3">
+                    <div class="card card-perso">
+                        <div class="card-img-top">
+                            <img class="img-fluid" src="{{ produit.image }}" style="height: 150px">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <a href="{{ path('product.edit', {id: produit.id}) }}">{{ produit.namep }}</a>
+                            </h5>
+                            <p class="card-text">
+                                {{ produit.description }}
+                            </p>
+                            <div class="text-primary" style="font-weight: bold; font-size: 2rem;">
+                                {{ produit.price }} €
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
 {% endblock %}

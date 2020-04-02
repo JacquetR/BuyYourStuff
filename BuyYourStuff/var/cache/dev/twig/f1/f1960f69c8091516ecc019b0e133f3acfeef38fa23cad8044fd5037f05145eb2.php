@@ -99,7 +99,7 @@ class __TwigTemplate_c671b2ac33aad3f11c127e0b99a843796ac6465ccca360686a2f029bfb4
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 20
-        echo "    <div class=\"text-right\" style=\"margin: 15px;\">
+        echo "    <div class=\"text-right\" style=\"margin: 80px 15px 15px;\">
         <a href=\"";
         // line 21
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("product.new");
@@ -198,7 +198,7 @@ class __TwigTemplate_c671b2ac33aad3f11c127e0b99a843796ac6465ccca360686a2f029bfb4
 {% endblock %}
 
 {% block body %}
-    <div class=\"text-right\" style=\"margin: 15px;\">
+    <div class=\"text-right\" style=\"margin: 80px 15px 15px;\">
         <a href=\"{{ path('product.new') }}\" class=\"btn btn-secondary\">Créer un nouveau produit</a>
     </div>
     <div class=\"container\">
