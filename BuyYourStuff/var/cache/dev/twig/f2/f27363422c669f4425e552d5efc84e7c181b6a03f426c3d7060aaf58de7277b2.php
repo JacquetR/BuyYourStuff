@@ -96,6 +96,6 @@ class __TwigTemplate_6f3a3c77a26f846d2cb5aa4713f3ad9b56581b398264223cfeabeb9a7da
 
 {% block body %}
     <h1>Bonjour</h1>
-{% endblock %}", "pages/home.html.twig", "C:\\Users\\Jacquet\\Documents\\BuyYourStuff\\templates\\pages\\home.html.twig");
+{% endblock %}", "pages/home.html.twig", "C:\\Users\\lorenzo\\Desktop\\Projet symfony\\BuyYourStuff\\BuyYourStuff\\templates\\pages\\home.html.twig");
     }
 }
