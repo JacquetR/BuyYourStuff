@@ -193,6 +193,6 @@ class __TwigTemplate_56d6e620ef49ebfa4d98e634177d7cf61d535b9df125fed348ebaa15eec
         {% block body '' %}
     </body>
 </html>
-", "@WebProfiler/Profiler/base.html.twig", "C:\\Users\\Jacquet\\Documents\\BuyYourStuff\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Profiler\\base.html.twig");
+", "@WebProfiler/Profiler/base.html.twig", "C:\\Users\\lorenzo\\Desktop\\Projet symfony\\BuyYourStuff\\BuyYourStuff\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Profiler\\base.html.twig");
     }
 }
