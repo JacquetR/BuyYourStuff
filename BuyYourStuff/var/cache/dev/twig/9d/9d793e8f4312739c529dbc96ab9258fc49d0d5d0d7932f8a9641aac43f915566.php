@@ -103,15 +103,25 @@ class __TwigTemplate_6ddc216faa59a07abe95bc8b7a0881f5557b0706db83acd786cf3af7f8d
             right: 0;\"/>
         </form>
       </li>
+      <li class=\"nav-item img-before\" style=\"position: absolute; right: 20px; top: 2px;\">
+        <a class=\"navbar-brand\" href=\"/panier\">
+          <div class=\"row\" style=\"margin-left: -8px;\">
+            <img src=\"https://image.flaticon.com/icons/png/512/126/126083.png\" alt=\"panier\" style=\"height: 25px; width: 25px;\">
+          </div>
+          <div class=\"row\" style=\"font-size: medium; top: 2px;\">
+            Panier
+          </div>
+        </a>
+      </li>
   </div>
 </nav>
         ";
-        // line 56
+        // line 66
         $this->displayBlock('body', $context, $blocks);
-        // line 57
+        // line 67
         echo "        ";
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 58
+        // line 68
         echo "        <script src=\"https://code.jquery.com/jquery-3.4.1.slim.min.js\" integrity=\"sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n\" crossorigin=\"anonymous\"></script>
         <script src=\"https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js\" integrity=\"sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo\" crossorigin=\"anonymous\"></script>
         <script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js\" integrity=\"sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6\" crossorigin=\"anonymous\"></script>
@@ -163,7 +173,7 @@ class __TwigTemplate_6ddc216faa59a07abe95bc8b7a0881f5557b0706db83acd786cf3af7f8d
 
     }
 
-    // line 56
+    // line 66
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -181,7 +191,7 @@ class __TwigTemplate_6ddc216faa59a07abe95bc8b7a0881f5557b0706db83acd786cf3af7f8d
 
     }
 
-    // line 57
+    // line 67
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -206,7 +216,7 @@ class __TwigTemplate_6ddc216faa59a07abe95bc8b7a0881f5557b0706db83acd786cf3af7f8d
 
     public function getDebugInfo()
     {
-        return array (  185 => 57,  167 => 56,  149 => 8,  130 => 5,  115 => 58,  112 => 57,  110 => 56,  61 => 9,  59 => 8,  53 => 5,  47 => 1,);
+        return array (  195 => 67,  177 => 66,  159 => 8,  140 => 5,  125 => 68,  122 => 67,  120 => 66,  61 => 9,  59 => 8,  53 => 5,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -264,6 +274,16 @@ class __TwigTemplate_6ddc216faa59a07abe95bc8b7a0881f5557b0706db83acd786cf3af7f8d
             right: 0;\"/>
         </form>
       </li>
+      <li class=\"nav-item img-before\" style=\"position: absolute; right: 20px; top: 2px;\">
+        <a class=\"navbar-brand\" href=\"/panier\">
+          <div class=\"row\" style=\"margin-left: -8px;\">
+            <img src=\"https://image.flaticon.com/icons/png/512/126/126083.png\" alt=\"panier\" style=\"height: 25px; width: 25px;\">
+          </div>
+          <div class=\"row\" style=\"font-size: medium; top: 2px;\">
+            Panier
+          </div>
+        </a>
+      </li>
   </div>
 </nav>
         {% block body %}{% endblock %}
@@ -273,6 +293,6 @@ class __TwigTemplate_6ddc216faa59a07abe95bc8b7a0881f5557b0706db83acd786cf3af7f8d
         <script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js\" integrity=\"sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6\" crossorigin=\"anonymous\"></script>
     </body>
 </html>
-", "base.html.twig", "C:\\Users\\lorenzo\\Desktop\\Projet symfony\\BuyYourStuff\\BuyYourStuff\\templates\\base.html.twig");
+", "base.html.twig", "C:\\Users\\Jacquet\\Documents\\BuyYourStuff\\templates\\base.html.twig");
     }
 }

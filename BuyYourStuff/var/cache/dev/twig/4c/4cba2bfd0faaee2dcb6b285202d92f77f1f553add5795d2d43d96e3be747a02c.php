@@ -100,8 +100,10 @@ class __TwigTemplate_29372d985b18bafe42553e9b9687033809f26310e42d26125ffdcb40781
             // line 13
             echo "                <div class=\"col-6\">
                     <ul>
-                        <li>";
+                        <li><a href=\"";
             // line 15
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("categorie.search", ["id" => twig_get_attribute($this->env, $this->source, $context["categorie"], "id", [], "any", false, false, false, 15)]), "html", null, true);
+            echo "\">";
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["categorie"], "namec", [], "any", false, false, false, 15), "html", null, true);
             echo "</li>
                     </ul>
@@ -135,7 +137,7 @@ class __TwigTemplate_29372d985b18bafe42553e9b9687033809f26310e42d26125ffdcb40781
 
     public function getDebugInfo()
     {
-        return array (  115 => 19,  105 => 15,  101 => 13,  97 => 12,  90 => 8,  87 => 7,  77 => 6,  59 => 3,  36 => 1,);
+        return array (  117 => 19,  105 => 15,  101 => 13,  97 => 12,  90 => 8,  87 => 7,  77 => 6,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -154,7 +156,7 @@ class __TwigTemplate_29372d985b18bafe42553e9b9687033809f26310e42d26125ffdcb40781
             {% for categorie in categories %}
                 <div class=\"col-6\">
                     <ul>
-                        <li>{{ categorie.namec }}</li>
+                        <li><a href=\"{{ path('categorie.search', {id: categorie.id}) }}\">{{ categorie.namec }}</li>
                     </ul>
                 </div>
             {% endfor %}

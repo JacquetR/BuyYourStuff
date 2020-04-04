@@ -27,8 +27,9 @@ class SearchController extends AbstractController {
     public function index(Request $request): Response {
         $name = $request->request->get("recherche", "default");
         $produits = $this->repository->findByName($name);
-        return $this->render('pages/home.html.twig', [
-            'produits' => $produits
+        return $this->render('pages/search.html.twig', [
+            'produits' => $produits,
+            'name' => $name
         ]);
     }
 }

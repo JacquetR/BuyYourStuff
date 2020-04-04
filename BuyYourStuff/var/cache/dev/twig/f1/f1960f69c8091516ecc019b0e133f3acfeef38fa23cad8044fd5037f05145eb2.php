@@ -125,7 +125,7 @@ class __TwigTemplate_c671b2ac33aad3f11c127e0b99a843796ac6465ccca360686a2f029bfb4
                             <h5 class=\"card-title\">
                                 <a href=\"";
             // line 33
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("product.edit", ["id" => twig_get_attribute($this->env, $this->source, $context["produit"], "id", [], "any", false, false, false, 33)]), "html", null, true);
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("product.show", ["id" => twig_get_attribute($this->env, $this->source, $context["produit"], "id", [], "any", false, false, false, 33)]), "html", null, true);
             echo "\">";
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "namep", [], "any", false, false, false, 33), "html", null, true);
             echo "</a>
@@ -211,7 +211,7 @@ class __TwigTemplate_c671b2ac33aad3f11c127e0b99a843796ac6465ccca360686a2f029bfb4
                         </div>
                         <div class=\"card-body\">
                             <h5 class=\"card-title\">
-                                <a href=\"{{ path('product.edit', {id: produit.id}) }}\">{{ produit.namep }}</a>
+                                <a href=\"{{ path('product.show', {id: produit.id}) }}\">{{ produit.namep }}</a>
                             </h5>
                             <p class=\"card-text\">
                                 {{ produit.description }}

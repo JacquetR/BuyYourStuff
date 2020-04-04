@@ -1,0 +1,32 @@
+{% extends "base.html.twig" %}
+
+{% block stylesheets %}
+{% endblock %}
+
+{% block body %}
+    <div style="margin: 140px"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5">
+                <h1>{{ product.namep }}</h1>
+                <p>{{ product.description }}</p>
+                <h2 class="text-primary">{{ product.price }} €</h2>
+                <div style="margin: 20px"></div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <a href="{{ path('panier.save', {id: product.id}) }}" class="btn btn-primary">
+                            Acheter
+                            <img src="https://image.flaticon.com/icons/png/512/126/126083.png" alt="panier" style="height: 30px; width: 30px;">
+                        </a>
+                    </div>
+                    <div class="col-md-6">
+                        <a href="{{ path('product.edit', {id: product.id}) }}" class="btn btn-secondary">Editer produit</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-7">
+                <img src="{{ product.image }}" alt="image produit" style="max-height: 350px;">
+            </div>
+        </div>
+    </div>
+{% endblock %}
