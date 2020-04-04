@@ -83,4 +83,17 @@ class CategorieController extends AbstractController {
             'form' => $form->createView()
         ]);
     }
+
+    /**
+     * @Route("/categorie/{id}", name="categorie.search")
+     * @param Categorie $categorie
+     * @return Response
+     */
+    public function search(Categorie $categorie) {
+        $products = $categorie->getProducts();
+        return $this->render('pages/categorieSearch.html.twig', [
+            'produits' => $products,
+            'categorie' => $categorie
+        ]);
+    }
 }

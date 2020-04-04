@@ -2,43 +2,43 @@
 
 namespace App\Repository;
 
-use App\Entity\Product;
+use App\Entity\Panier;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Common\Persistence\ManagerRegistry;
 
 /**
- * @method Product|null find($id, $lockMode = null, $lockVersion = null)
- * @method Product|null findOneBy(array $criteria, array $orderBy = null)
- * @method Product[]    findAll()
- * @method Product[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
+ * @method Panier|null find($id, $lockMode = null, $lockVersion = null)
+ * @method Panier|null findOneBy(array $criteria, array $orderBy = null)
+ * @method Panier[]    findAll()
+ * @method Panier[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
-class ProductRepository extends ServiceEntityRepository
+class PanierRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
     {
-        parent::__construct($registry, Product::class);
+        parent::__construct($registry, Panier::class);
     }
 
-    public function findByName(String $name) {
+    public function findByUserId(int $id) {
         return $this->createQueryBuilder('p')
-            ->andWhere('p.namep LIKE :n')
-            ->setParameter('n', '%'.$name.'%')
-            ->getQuery()
-            ->getResult()
-        ;
-    }
-
-    public function findById(int $id) {
-        return $this->createQueryBuilder('p')
-            ->andWhere('p.id = :i')
+            ->andWhere('p.User = :i')
             ->setParameter('i', $id)
             ->getQuery()
-            ->getResult()
-        ;
+            ->getResult();
+    }
+
+    public function findByUserAndProduct(int $idU, int $idP) {
+        return $this->createQueryBuilder('p')
+            ->andWhere('p.User = :iu')
+            ->andWhere('p.Product = :ip')
+            ->setParameter('iu', $idU)
+            ->setParameter('ip', $idP)
+            ->getQuery()
+            ->getResult();
     }
 
     // /**
-    //  * @return Product[] Returns an array of Product objects
+    //  * @return Panier[] Returns an array of Panier objects
     //  */
     /*
     public function findByExampleField($value)
@@ -55,7 +55,7 @@ class ProductRepository extends ServiceEntityRepository
     */
 
     /*
-    public function findOneBySomeField($value): ?Product
+    public function findOneBySomeField($value): ?Panier
     {
         return $this->createQueryBuilder('p')
             ->andWhere('p.exampleField = :val')

@@ -17,26 +17,25 @@
 {% endblock %}
 
 {% block body %}
-    <div class="text-right" style="margin: 80px 15px 15px;">
-        <a href="{{ path('product.new') }}" class="btn btn-secondary">Créer un nouveau produit</a>
-    </div>
+    <div style="margin: 80px"></div>
     <div class="container">
         <div class="row">
-            {% for produit in produits %}
+            {% for product in products %}
                 <div class="col-md-3">
                     <div class="card card-perso">
                         <div class="card-img-top">
-                            <img class="img-fluid" src="{{ produit.image }}" style="height: 150px">
+                            <a class="btn btn-danger" style="border-radius: 20px; position: absolute; right: 10px;" href="{{ path('panier.delete', {id: product.0.id}) }}">X</a>
+                            <img class="img-fluid" src="{{ product.0.image }}" style="height: 150px">
                         </div>
                         <div class="card-body">
                             <h5 class="card-title">
-                                <a href="{{ path('product.show', {id: produit.id}) }}">{{ produit.namep }}</a>
+                                <a href="{{ path('product.show', {id: product.0.id}) }}">{{ product.0.namep }}</a>
                             </h5>
                             <p class="card-text">
-                                {{ produit.description }}
+                                {{ product.0.description }}
                             </p>
                             <div class="text-primary" style="font-weight: bold; font-size: 2rem;">
-                                {{ produit.price }} €
+                                {{ product.0.price }} €
                             </div>
                         </div>
                     </div>

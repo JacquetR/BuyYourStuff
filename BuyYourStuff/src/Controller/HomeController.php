@@ -24,9 +24,6 @@ class HomeController extends AbstractController {
      * @return Response
      */
     public function index(): Response {
-        $produits = $this->repository->findByName("Clavier");
-        return $this->render('pages/home.html.twig', [
-            'produits' => $produits
-        ]);
+        return $this->render('pages/home.html.twig');
     }
 }

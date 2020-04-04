@@ -42,7 +42,7 @@ class Product
      */
     private $categorie;
 
-    public function getId(): ?int
+    public function getId(): int
     {
         return $this->id;
     }
@@ -105,5 +105,9 @@ class Product
         $this->categorie = $categorie;
 
         return $this;
+    }
+
+    public function __toString(): String {
+        return $this->id;
     }
 }
