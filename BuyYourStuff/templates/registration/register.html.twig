@@ -3,13 +3,19 @@
 {% block title %}Register{% endblock %}
 
 {% block body %}
-    <h1>Register</h1>
+	<div style="height: 100vh; background-color: #007bff; padding-top: 20px; text-align: -webkit-center;">
+		<div style="background-color: white; max-width: max-content; min-width: 450px; padding: 10px; border-radius: 20px;">
+			<h1 class="h3 mb-3 font-weight-normal">Register</h1>
 
-    {{ form_start(registrationForm) }}
-        {{ form_row(registrationForm.email) }}
-        {{ form_row(registrationForm.plainPassword) }}
-        {{ form_row(registrationForm.agreeTerms) }}
+			{{ form_start(registrationForm) }}
+			<div style="display: block; max-width: 200px;">
+				{{ form_row(registrationForm.email) }}
+				{{ form_row(registrationForm.plainPassword) }}
+				{{ form_row(registrationForm.agreeTerms) }}
+			</div>
 
-        <button class="btn">Register</button>
-    {{ form_end(registrationForm) }}
+				<button class="btn btn-lg btn-primary">Register</button>
+			{{ form_end(registrationForm) }}
+		</div>
+	</div>
 {% endblock %}
