@@ -3,8 +3,11 @@
 namespace App\Controller;
 
 use App\Entity\Product;
+use App\Entity\Avis;
 use App\Form\ProductType;
 use App\Repository\ProductRepository;
+use DateTime;
+use DateTimeZone;
 use Doctrine\Common\Persistence\ObjectManager;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -91,8 +94,32 @@ class ProductController extends AbstractController {
      */
     public function show(Product $product) {
         return $this->render('pages/show.html.twig', [
-            'product' => $product
+            'product' => $product,
+            'avis' => $product->getAvis()
         ]);
+    }
+
+    /**
+     * @Route("/product/avis/{id}", name="product.avis")
+     * @param Product $product
+     * @param Request $request
+     * @return Response
+     */
+    public function avis(Product $product, Request $request) {
+        $user = $this->get('security.token_storage')->getToken()->getUser();
+        $texte = $request->request->get("commentaire", "default");
+        $date = new DateTime('now', new DateTimeZone('Europe/Paris'));
+        $date = $date->format('d-m-Y H:i:s');
+        $avis = new Avis();
+        $avis->setTexte($texte);
+        $avis->setProduct($product);
+        $avis->setAuteur($user->getEmail());
+        $avis->setDate($date);
+        if(strlen($texte) > 0) {
+            $this->em->persist($avis);
+            $this->em->flush();
+        }
+        return $this->redirectToRoute('product.show', ['id' => $product->getId()]);
     }
 
 }

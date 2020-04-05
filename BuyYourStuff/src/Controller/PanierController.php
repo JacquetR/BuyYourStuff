@@ -44,11 +44,14 @@ class PanierController extends AbstractController {
         $user = $this->get('security.token_storage')->getToken()->getUser();
         $paniers = $user->getPaniers();
         $products = array();
+        $prixtot = 0;
         foreach($paniers as $p) {
             $products[] = $this->productRepository->findById($p->getProduct()->getId());
+            $prixtot += $p->getProduct()->getPrice();
         }
         return $this->render('pages/panier.html.twig', [
-            'products' => $products
+            'products' => $products,
+            'prixtot' => $prixtot
         ]);
     }
 
