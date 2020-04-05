@@ -22,7 +22,7 @@
         <div class="row">
             {% for product in products %}
                 <div class="col-md-3">
-                    <div class="card card-perso">
+                    <div class="card card-perso" style="max-height: 420px">
                         <div class="card-img-top">
                             <a class="btn btn-danger" style="border-radius: 20px; position: absolute; right: 10px;" href="{{ path('panier.delete', {id: product.0.id}) }}">X</a>
                             <img class="img-fluid" src="{{ product.0.image }}" style="height: 150px">
@@ -31,7 +31,7 @@
                             <h5 class="card-title">
                                 <a href="{{ path('product.show', {id: product.0.id}) }}">{{ product.0.namep }}</a>
                             </h5>
-                            <p class="card-text">
+                            <p class="card-text" style="max-height: 120px; min-height: 120px; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 5;">
                                 {{ product.0.description }}
                             </p>
                             <div class="text-primary" style="font-weight: bold; font-size: 2rem;">
