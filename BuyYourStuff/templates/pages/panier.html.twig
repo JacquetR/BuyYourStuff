@@ -18,6 +18,7 @@
 
 {% block body %}
     <div style="margin: 80px"></div>
+    <h1 style="margin: 0px 0px 30px 30px;">Votre panier</h1>
     <div class="container">
         <div class="row">
             {% for product in products %}
@@ -41,6 +42,10 @@
                     </div>
                 </div>
             {% endfor %}
+            <div style="margin-left: 50px;">
+                <h3 class="text-primary" style="margin-bottom: 20px">Prix total : {{ prixtot }} €</h3>
+                <button class="btn btn-success">Commander</button>
+            </div>
         </div>
     </div>
 {% endblock %}
