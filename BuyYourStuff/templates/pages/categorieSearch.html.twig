@@ -23,7 +23,7 @@
         <div class="row">
             {% for produit in produits %}
                 <div class="col-md-3">
-                    <div class="card card-perso">
+                    <div class="card card-perso" style="max-height: 420px">
                         <div class="card-img-top">
                             <img class="img-fluid" src="{{ produit.image }}" style="height: 150px">
                         </div>
@@ -31,7 +31,7 @@
                             <h5 class="card-title">
                                 <a href="{{ path('product.show', {id: produit.id}) }}">{{ produit.namep }}</a>
                             </h5>
-                            <p class="card-text">
+                            <p class="card-text"  style="max-height: 120px; min-height: 120px; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 5;">
                                 {{ produit.description }}
                             </p>
                             <div class="text-primary" style="font-weight: bold; font-size: 2rem;">

@@ -1,13 +1,17 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-<div style="margin: 100px"></div>
-<div class="container mt-4">
-    <h1>Éditer</h1>
-    {{ form_start(form) }}
-    {{ form_rest(form) }}
-    <button class="btn btn-primary">Sauvegarder</button>
-    {{ form_end(form) }}
+<div style="padding-top: 70px; display: flex;">
+	<div style="max-width: 182px; margin-left: 150px;">
+		<h1>Éditer</h1>
+		{{ form_start(form) }}
+		{{ form_rest(form) }}
+		<button class="btn btn-primary" style="margin-top: 10px;">Sauvegarder</button>
+		{{ form_end(form) }}
+	</div>
+	<div>
+		<img src="{{ product.image }}" alt="image produit" style="max-height: 350px; margin-left: 150px">
+	</div>
 </div>
 
 {% endblock %}
